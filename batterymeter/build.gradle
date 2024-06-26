@@ -1,60 +1,60 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-
-android {
-    compileSdkVersion config.compileSdk
-
-    defaultConfig {
-        minSdkVersion config.minSdk
-        targetSdkVersion config.targetSdk
-
-        versionCode config.versionCode
-        versionName config.versionName
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-}
-
-
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation deps.kotlinStdLib
-
-    testImplementation deps.junit
-    androidTestImplementation deps.atsl
-    androidTestImplementation deps.espresso
-}
-
-ext {
-    bintrayRepo = 'view'
-    bintrayName = 'batterymeter'
-
-    publishedGroupId = 'eo.view'
-    libraryName = 'BatteryMeter'
-    artifact = 'batterymeter'
-
-    libraryDescription = 'Material design battery meter view for Android'
-
-    siteUrl = 'https://github.com/eo/battery-meter-view'
-    gitUrl = 'https://github.com/eo/battery-meter-view.git'
-
-    libraryVersion = config.versionName
-
-    developerId = 'eo'
-    developerName = 'Erdem Orman'
-    developerEmail = 'ormanerdem@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
-
-apply from: '../bintray-upload.gradle'
+//apply plugin: 'com.android.library'
+//apply plugin: 'kotlin-android'
+//
+//android {
+//    compileSdkVersion config.compileSdk
+//
+//    defaultConfig {
+//        minSdkVersion config.minSdk
+//        targetSdkVersion config.targetSdk
+//
+//        versionCode config.versionCode
+//        versionName config.versionName
+//
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//    }
+//
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+//}
+//
+//
+//dependencies {
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//
+//    implementation deps.kotlinStdLib
+//
+//    testImplementation deps.junit
+//    androidTestImplementation deps.atsl
+//    androidTestImplementation deps.espresso
+//}
+//
+//ext {
+//    bintrayRepo = 'view'
+//    bintrayName = 'batterymeter'
+//
+//    publishedGroupId = 'eo.view'
+//    libraryName = 'BatteryMeter'
+//    artifact = 'batterymeter'
+//
+//    libraryDescription = 'Material design battery meter view for Android'
+//
+//    siteUrl = 'https://github.com/eo/battery-meter-view'
+//    gitUrl = 'https://github.com/eo/battery-meter-view.git'
+//
+//    libraryVersion = config.versionName
+//
+//    developerId = 'eo'
+//    developerName = 'Erdem Orman'
+//    developerEmail = 'ormanerdem@gmail.com'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
+//
+//apply from: '../bintray-upload.gradle'
